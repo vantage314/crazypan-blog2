@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Crazypan 个人博客",
-  description: "分享技术、思考与生活的个人博客",
+  description: "你的时间花在哪里，你的收获就在哪里___lisir",
     generator: 'v0.dev'
 }
 

@@ -17,12 +17,10 @@ export default function AboutPage() {
       <Card>
         <CardContent className="pt-6">
           <div className="prose prose-gray dark:prose-invert max-w-none">
-            <p className="text-lg leading-relaxed mb-6">你好！我是 Crazypan，一名热爱技术和生活的开发者。</p>
+            <p className="text-lg leading-relaxed mb-6">你好！我是 Crazypan</p>
 
             <h3 className="text-xl font-semibold mb-3">关于我的工作</h3>
-            <p className="mb-4">
-              我专注于前端开发，特别是 React 和 Next.js 生态系统。同时也对 AI、区块链等新兴技术保持浓厚兴趣。
-            </p>
+           
 
             <h3 className="text-xl font-semibold mb-3">关于这个博客</h3>
             <p className="mb-4">这里是我分享技术心得、生活感悟和个人思考的地方。希望我的文章能对你有所帮助。</p>

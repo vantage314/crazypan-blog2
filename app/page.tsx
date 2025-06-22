@@ -6,7 +6,7 @@ export default function Home() {
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-4">欢迎来到我的博客</h1>
-        <p className="text-lg text-muted-foreground">分享技术、思考与生活的点点滴滴</p>
+        <p className="text-lg text-muted-foreground">你的时间花在哪里，你的收获就在哪里__lisr</p>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
