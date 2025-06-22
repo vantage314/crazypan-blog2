@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "content": "非常棒的博客！界面设计很现代化，内容也很有价值。",
+    "author": "张三",
+    "createdAt": "2024-01-01T10:00:00.000Z",
+    "approved": true
+  },
+  {
+    "id": "2",
+    "content": "Next.js 15 的新特性确实很实用，感谢分享！",
+    "author": "李四",
+    "createdAt": "2024-01-02T14:30:00.000Z",
+    "approved": true
+  },
+  {
+    "id": "3",
+    "content": "TypeScript 的最佳实践总结得很到位，对初学者很有帮助。",
+    "author": "王五",
+    "createdAt": "2024-01-03T09:15:00.000Z",
+    "approved": true
+  },
+  {
+    "id": "4",
+    "content": "这个留言系统设计得很好，支持审核功能。",
+    "author": "赵六",
+    "createdAt": "2024-01-04T16:45:00.000Z",
+    "approved": false
+  }
+] 

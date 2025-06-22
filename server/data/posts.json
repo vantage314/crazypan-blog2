@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "welcome-to-my-blog",
+    "title": "欢迎来到我的博客",
+    "excerpt": "这是我的第一篇博客文章，介绍了博客的基本功能和特色。",
+    "content": "# 欢迎来到我的博客\n\n这是我的第一篇博客文章，很高兴能够在这里与大家分享我的想法和经验。\n\n## 博客特色\n\n- 🎨 现代化的 UI 设计\n- 📝 Markdown 支持\n- 💬 留言互动功能\n- 📊 数据统计分析\n- 🔐 安全的用户认证\n\n## 技术栈\n\n- **前端**: Next.js 15 + TypeScript + Tailwind CSS\n- **后端**: Node.js + Express + TypeScript\n- **数据存储**: JSON 文件 + 文件系统\n- **认证**: JWT + bcrypt\n\n希望这个博客能够为大家提供有价值的内容！",
+    "tags": ["博客", "介绍", "技术"],
+    "published": true,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "slug": "nextjs-15-features",
+    "title": "Next.js 15 新特性详解",
+    "excerpt": "深入解析 Next.js 15 的新功能和改进，包括 App Router、Server Components 等。",
+    "content": "# Next.js 15 新特性详解\n\nNext.js 15 带来了许多激动人心的新功能，让我们一起来了解一下。\n\n## 主要新特性\n\n### 1. App Router 改进\n\nApp Router 在 15 版本中得到了显著改进，提供了更好的性能和开发体验。\n\n### 2. Server Components\n\nServer Components 让我们能够在服务器端渲染组件，减少客户端的 JavaScript 包大小。\n\n### 3. 性能优化\n\n- 更快的构建速度\n- 更小的包大小\n- 更好的缓存策略\n\n## 升级建议\n\n如果你正在使用 Next.js 14，建议逐步升级到 15 版本。\n\n```bash\nnpm install next@latest react@latest react-dom@latest\n```\n\n## 总结\n\nNext.js 15 是一个重要的版本更新，带来了许多实用的新功能。建议开发者们及时升级并体验这些新特性。",
+    "tags": ["Next.js", "React", "前端", "技术"],
+    "published": true,
+    "createdAt": "2024-01-02T00:00:00.000Z",
+    "updatedAt": "2024-01-02T00:00:00.000Z"
+  },
+  {
+    "slug": "typescript-best-practices",
+    "title": "TypeScript 最佳实践指南",
+    "excerpt": "分享在实际项目中使用 TypeScript 的经验和最佳实践，帮助你写出更好的代码。",
+    "content": "# TypeScript 最佳实践指南\n\nTypeScript 已经成为现代 JavaScript 开发的标准，本文将分享一些实用的最佳实践。\n\n## 1. 类型定义\n\n### 使用接口定义对象结构\n\n```typescript\ninterface User {\n  id: string;\n  name: string;\n  email: string;\n  createdAt: Date;\n}\n```\n\n### 使用类型别名\n\n```typescript\ntype Status = 'pending' | 'approved' | 'rejected';\ntype UserRole = 'admin' | 'user' | 'guest';\n```\n\n## 2. 函数类型\n\n### 明确的参数和返回值类型\n\n```typescript\nfunction calculateTotal(items: Item[]): number {\n  return items.reduce((sum, item) => sum + item.price, 0);\n}\n```\n\n## 3. 泛型使用\n\n```typescript\nfunction createArray<T>(length: number, value: T): T[] {\n  return Array(length).fill(value);\n}\n```\n\n## 4. 错误处理\n\n```typescript\nfunction safeParse<T>(json: string): T | null {\n  try {\n    return JSON.parse(json);\n  } catch {\n    return null;\n  }\n}\n```\n\n## 总结\n\nTypeScript 能够帮助我们写出更安全、更易维护的代码。掌握这些最佳实践，让你的项目更加健壮。",
+    "tags": ["TypeScript", "编程", "最佳实践"],
+    "published": true,
+    "createdAt": "2024-01-03T00:00:00.000Z",
+    "updatedAt": "2024-01-03T00:00:00.000Z"
+  }
+] 
