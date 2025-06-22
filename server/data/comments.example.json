@@ -19,19 +19,5 @@
     "author": "王五",
     "createdAt": "2024-01-03T09:15:00.000Z",
     "approved": true
-  },
-  {
-    "id": "4",
-    "content": "这个留言系统设计得很好，支持审核功能。",
-    "author": "赵六",
-    "createdAt": "2024-01-04T16:45:00.000Z",
-    "approved": false
-  },
-  {
-    "id": "1750598399600",
-    "author": "11",
-    "content": "测试",
-    "createdAt": "2025-06-22T13:19:59.600Z",
-    "approved": true
   }
-]
+] 

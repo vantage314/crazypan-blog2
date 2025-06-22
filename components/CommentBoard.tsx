@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Send } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -19,21 +19,72 @@ export default function CommentBoard({ comments: initialComments }: CommentBoard
   const [comments, setComments] = useState(initialComments)
   const [name, setName] = useState("")
   const [content, setContent] = useState("")
+  const [message, setMessage] = useState("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // 加载留言数据
+  useEffect(() => {
+    const loadComments = async () => {
+      try {
+        const res = await fetch("/api/comments")
+        const data = await res.json()
+        if (data.success) {
+          // 转换API数据格式为组件需要的格式
+          const formattedComments = data.comments.map((comment: any) => ({
+            id: comment.id,
+            name: comment.author,
+            content: comment.content,
+            time: new Date(comment.createdAt).toLocaleString("zh-CN"),
+            avatar: "/placeholder.svg"
+          }))
+          setComments(formattedComments)
+        }
+      } catch (error) {
+        console.error("加载留言失败:", error)
+      }
+    }
+
+    loadComments()
+  }, [])
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!name.trim() || !content.trim()) return
 
-    const newComment: Comment = {
-      id: Date.now(),
-      name: name.trim(),
-      content: content.trim(),
-      time: new Date().toLocaleString("zh-CN"),
-    }
+    setIsSubmitting(true)
+    setMessage("")
 
-    setComments([newComment, ...comments])
-    setName("")
-    setContent("")
+    try {
+      const res = await fetch("/api/comments", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ author: name.trim(), content: content.trim() })
+      })
+
+      const data = await res.json()
+      if (data.success) {
+        // 添加新留言到列表
+        const newComment: Comment = {
+          id: data.comment.id,
+          name: data.comment.author,
+          content: data.comment.content,
+          time: new Date(data.comment.createdAt).toLocaleString("zh-CN"),
+          avatar: "/placeholder.svg"
+        }
+
+        setComments([newComment, ...comments])
+        setName("")
+        setContent("")
+        setMessage("✅ 留言成功")
+      } else {
+        setMessage("❌ 留言失败：" + data.error)
+      }
+    } catch (error) {
+      console.error("提交留言失败:", error)
+      setMessage("❌ 网络错误，请稍后重试")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -45,19 +96,31 @@ export default function CommentBoard({ comments: initialComments }: CommentBoard
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
-            <Input placeholder="请输入您的昵称" value={name} onChange={(e) => setName(e.target.value)} required />
+            <Input 
+              placeholder="请输入您的昵称" 
+              value={name} 
+              onChange={(e) => setName(e.target.value)} 
+              required 
+              disabled={isSubmitting}
+            />
             <Textarea
               placeholder="写下您的留言..."
               value={content}
               onChange={(e) => setContent(e.target.value)}
               rows={4}
               required
+              disabled={isSubmitting}
             />
-            <Button type="submit" className="w-full sm:w-auto">
+            <Button type="submit" className="w-full sm:w-auto" disabled={isSubmitting}>
               <Send className="h-4 w-4 mr-2" />
-              发送留言
+              {isSubmitting ? "发送中..." : "发送留言"}
             </Button>
           </form>
+          {message && (
+            <p className={`mt-2 text-sm ${message.includes("✅") ? "text-green-600" : "text-red-600"}`}>
+              {message}
+            </p>
+          )}
         </CardContent>
       </Card>
 
