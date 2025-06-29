@@ -138,7 +138,7 @@ export default function CommentBoard({ comments: initialComments }: CommentBoard
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center space-x-2 mb-1">
                     <span className="font-medium text-sm">{comment.name}</span>
-                    <span className="text-xs text-muted-foreground">{comment.time}</span>
+                    <span className="text-xs text-white/80">{comment.time}</span>
                   </div>
                   <p className="text-sm leading-relaxed">{comment.content}</p>
                 </div>

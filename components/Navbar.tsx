@@ -4,7 +4,6 @@ import Link from "next/link"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import ThemeToggle from "./ThemeToggle"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { ChevronDown } from "lucide-react"
 
@@ -58,13 +57,13 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <nav className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 w-full border-b bg-white/10 backdrop-blur-md text-white">
+      <nav className="backdrop-blur-md bg-white/10 fixed top-0 left-0 w-full z-50 shadow-md">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
           <Link href="/" className="flex items-center space-x-2">
   <img src="/logo.png" alt="Crazypan Logo" className="w-8 h-8 object-cover rounded-full" />
-  <span className="text-xl font-bold text-foreground">Crazypan</span>
+  <span className="text-xl font-bold text-white">Crazypan</span>
 </Link>
 
           </div>
@@ -75,7 +74,7 @@ export default function Navbar() {
               {navigation.map((item) =>
                 item.submenu ? (
                   <DropdownMenu key={item.name}>
-                    <DropdownMenuTrigger className="flex items-center px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
+                    <DropdownMenuTrigger className="flex items-center px-3 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white">
                       {item.name}
                       <ChevronDown className="ml-1 h-3 w-3" />
                     </DropdownMenuTrigger>
@@ -98,7 +97,7 @@ export default function Navbar() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                    className="px-3 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white"
                   >
                     {item.name}
                   </Link>
@@ -108,11 +107,9 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center space-x-2">
-            <ThemeToggle />
-
             {/* Mobile menu button */}
             <div className="md:hidden">
-              <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+              <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-white">
                 {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
               </Button>
             </div>
@@ -127,7 +124,7 @@ export default function Navbar() {
                 <div key={item.name}>
                   <Link
                     href={item.href}
-                    className="block px-3 py-2 text-base font-medium text-muted-foreground transition-colors hover:text-foreground"
+                    className="block px-3 py-2 text-base font-medium text-white/80 transition-colors hover:text-white"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
@@ -138,7 +135,7 @@ export default function Navbar() {
                         <Link
                           key={subItem.name}
                           href={subItem.href}
-                          className="block px-3 py-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                          className="block px-3 py-1 text-sm text-white/80 transition-colors hover:text-white"
                           onClick={() => setMobileMenuOpen(false)}
                         >
                           {subItem.name}

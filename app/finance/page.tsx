@@ -8,7 +8,7 @@ export default function FinancePage() {
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-4">理财专栏</h1>
-        <p className="text-muted-foreground">分享个人理财心得与投资思考</p>
+        <p className="text-white/80">分享个人理财心得与投资思考</p>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
@@ -19,7 +19,7 @@ export default function FinancePage() {
 
       {financePosts.length === 0 && (
         <div className="text-center py-12">
-          <p className="text-muted-foreground">暂无相关文章</p>
+          <p className="text-white/80">暂无相关文章</p>
         </div>
       )}
     </div>

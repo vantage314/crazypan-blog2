@@ -45,11 +45,11 @@ export default function AdminLayout({ children, title }: AdminLayoutProps) {
         {/* 顶部导航 */}
         <div className="mb-8 flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <Link href="/" className="text-sm text-muted-foreground hover:text-foreground">
+            <Link href="/" className="text-sm text-white/80 hover:text-white">
               <Home className="h-4 w-4 inline mr-1" />
               返回前台
             </Link>
-            <span className="text-muted-foreground">|</span>
+            <span className="text-white/80">|</span>
             <h1 className="text-2xl font-bold">{title}</h1>
           </div>
           <Button variant="outline" onClick={handleLogout}>

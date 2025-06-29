@@ -22,44 +22,44 @@ export default function AdminDashboardPage() {
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">总文章数</CardTitle>
-              <FileText className="h-4 w-4 text-muted-foreground" />
+              <FileText className="h-4 w-4 text-white/80" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{stats.totalPosts}</div>
-              <p className="text-xs text-muted-foreground">+2 本月新增</p>
+              <p className="text-xs text-white/80">+2 本月新增</p>
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">总留言数</CardTitle>
-              <MessageSquare className="h-4 w-4 text-muted-foreground" />
+              <MessageSquare className="h-4 w-4 text-white/80" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{stats.totalComments}</div>
-              <p className="text-xs text-muted-foreground">+5 本周新增</p>
+              <p className="text-xs text-white/80">+5 本周新增</p>
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">总阅读量</CardTitle>
-              <Eye className="h-4 w-4 text-muted-foreground" />
+              <Eye className="h-4 w-4 text-white/80" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{stats.totalViews}</div>
-              <p className="text-xs text-muted-foreground">+12% 较上月</p>
+              <p className="text-xs text-white/80">+12% 较上月</p>
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">总点赞数</CardTitle>
-              <TrendingUp className="h-4 w-4 text-muted-foreground" />
+              <TrendingUp className="h-4 w-4 text-white/80" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{stats.totalLikes}</div>
-              <p className="text-xs text-muted-foreground">+8% 较上月</p>
+              <p className="text-xs text-white/80">+8% 较上月</p>
             </CardContent>
           </Card>
         </div>
@@ -104,21 +104,21 @@ export default function AdminDashboardPage() {
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 <div className="flex-1">
                   <p className="text-sm">新文章《深入理解大模型提示词工程》发布</p>
-                  <p className="text-xs text-muted-foreground">2 小时前</p>
+                  <p className="text-xs text-white/80">2 小时前</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
                 <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                 <div className="flex-1">
                   <p className="text-sm">收到新留言 3 条</p>
-                  <p className="text-xs text-muted-foreground">5 小时前</p>
+                  <p className="text-xs text-white/80">5 小时前</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
                 <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
                 <div className="flex-1">
                   <p className="text-sm">文章《Next.js 15 新特性》获得 20 个点赞</p>
-                  <p className="text-xs text-muted-foreground">1 天前</p>
+                  <p className="text-xs text-white/80">1 天前</p>
                 </div>
               </div>
             </div>

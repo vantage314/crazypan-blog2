@@ -95,25 +95,25 @@ export default function AdminStatsPage() {
           <Card>
             <CardContent className="p-4 text-center">
               <div className="text-2xl font-bold text-blue-600">5</div>
-              <div className="text-sm text-muted-foreground">总文章数</div>
+              <div className="text-sm text-white/80">总文章数</div>
             </CardContent>
           </Card>
           <Card>
             <CardContent className="p-4 text-center">
               <div className="text-2xl font-bold text-green-600">289</div>
-              <div className="text-sm text-muted-foreground">总点赞数</div>
+              <div className="text-sm text-white/80">总点赞数</div>
             </CardContent>
           </Card>
           <Card>
             <CardContent className="p-4 text-center">
               <div className="text-2xl font-bold text-purple-600">3,456</div>
-              <div className="text-sm text-muted-foreground">总阅读量</div>
+              <div className="text-sm text-white/80">总阅读量</div>
             </CardContent>
           </Card>
           <Card>
             <CardContent className="p-4 text-center">
               <div className="text-2xl font-bold text-orange-600">12</div>
-              <div className="text-sm text-muted-foreground">总留言数</div>
+              <div className="text-sm text-white/80">总留言数</div>
             </CardContent>
           </Card>
         </div>

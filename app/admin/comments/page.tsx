@@ -38,7 +38,7 @@ export default function AdminCommentsPage() {
                           <User className="h-3 w-3 mr-1" />
                           {comment.name}
                         </span>
-                        <span className="text-xs text-muted-foreground flex items-center">
+                        <span className="text-xs text-white/80 flex items-center">
                           <Clock className="h-3 w-3 mr-1" />
                           {comment.time}
                         </span>
@@ -58,7 +58,7 @@ export default function AdminCommentsPage() {
         {comments.length === 0 && (
           <Card>
             <CardContent className="text-center py-12">
-              <p className="text-muted-foreground">暂无留言</p>
+              <p className="text-white/80">暂无留言</p>
             </CardContent>
           </Card>
         )}

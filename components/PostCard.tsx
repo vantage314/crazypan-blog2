@@ -20,7 +20,7 @@ export default function PostCard({ post }: PostCardProps) {
             </h3>
           </Link>
         </div>
-        <p className="text-sm text-muted-foreground mt-2 line-clamp-2">{post.description}</p>
+        <p className="text-sm text-white/80 mt-2 line-clamp-2">{post.description}</p>
       </CardHeader>
 
       <CardContent className="pt-0">
@@ -37,7 +37,7 @@ export default function PostCard({ post }: PostCardProps) {
           ))}
         </div>
 
-        <div className="flex items-center justify-between text-sm text-muted-foreground">
+        <div className="flex items-center justify-between text-sm text-white/80">
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-1">
               <Calendar className="h-4 w-4" />

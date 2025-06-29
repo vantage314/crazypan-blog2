@@ -1,14 +1,38 @@
-import { Eye } from "lucide-react"
+"use client"
 
-interface ViewCounterProps {
-  views: number
-}
+import { useEffect, useState } from "react"
 
-export default function ViewCounter({ views }: ViewCounterProps) {
+export default function ViewCounter({ slug }: { slug: string }) {
+  const [views, setViews] = useState(0)
+
+  useEffect(() => {
+    // 模拟获取浏览量
+    setViews(Math.floor(Math.random() * 1000) + 100)
+  }, [slug])
+
   return (
-    <div className="flex items-center space-x-1 text-sm text-muted-foreground">
-      <Eye className="h-4 w-4" />
-      <span>{views} 次阅读</span>
+    <div className="flex items-center space-x-1 text-sm text-white/80">
+      <svg
+        className="h-4 w-4"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+        />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+        />
+      </svg>
+      <span>{views} 次浏览</span>
     </div>
   )
 }

@@ -71,7 +71,7 @@ export default function LoginForm() {
               {isLoading ? "登录中..." : "登录"}
             </Button>
           </form>
-          <div className="mt-4 text-sm text-muted-foreground text-center">
+          <div className="mt-4 text-sm text-white/80 text-center">
             <p>测试账号：admin</p>
             <p>测试密码：123456</p>
           </div>

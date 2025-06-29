@@ -25,18 +25,18 @@ export default async function PostPage({ params }: PostPageProps) {
         <header className="mb-8">
           <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
 
-          <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-4">
+          <div className="flex flex-wrap items-center gap-4 text-sm text-white/80 mb-4">
             <div className="flex items-center space-x-1">
               <Calendar className="h-4 w-4" />
               <span>{post.date}</span>
             </div>
-            <ViewCounter views={post.views} />
+            <ViewCounter slug={post.slug} />
             <LikeButton initialLikes={post.likes} />
           </div>
 
           <div className="flex flex-wrap gap-2">
             {post.tags.map((tag) => (
-              <Badge key={tag} variant="secondary">
+              <Badge key={tag} variant="glass">
                 <Tag className="h-3 w-3 mr-1" />
                 {tag}
               </Badge>

@@ -1,37 +1,48 @@
 import { Github, Mail, Twitter } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import Image from "next/image"
 
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       <div className="text-center mb-8">
-        <Avatar className="h-32 w-32 mx-auto mb-4">
-          <AvatarImage src="/placeholder.svg?height=128&width=128" />
-          <AvatarFallback className="text-2xl">CP</AvatarFallback>
-        </Avatar>
+        <div className="relative h-32 w-32 mx-auto mb-4 rounded-full overflow-hidden ring-2 ring-white/80">
+          <Image
+            src="/me.png"
+            alt="我的头像"
+            fill
+            sizes="128px"
+            className="object-cover"
+            priority={false} // 如首页就展示，建议设为 true
+          />
+        </div>
         <h1 className="text-3xl font-bold mb-4">关于我</h1>
       </div>
 
       <Card>
         <CardContent className="pt-6">
           <div className="prose prose-gray dark:prose-invert max-w-none">
-            <p className="text-lg leading-relaxed mb-6">你好！我是 Crazypan</p>
+            <p className="text-lg leading-relaxed mb-6">你好！我是刘子铭 大家可以叫我PIG_Liu</p>
 
-            <h3 className="text-xl font-semibold mb-3">关于我的工作</h3>
-           
+            
+            {/* 工作描述省略 */}
 
-            <h3 className="text-xl font-semibold mb-3">关于这个博客</h3>
-            <p className="mb-4">这里是我分享技术心得、生活感悟和个人思考的地方。希望我的文章能对你有所帮助。</p>
+            <h3 className="text-xl font-semibold mb-3">关于个人优秀事迹</h3>
+            <p className="mb-4">以下内容，是二十多年以来做的优秀事迹</p>
+            <li>往独臂老人胳膊上撒痒痒粉</li>
+              <li>在殡仪馆门口发喜糖</li>
+              <li>告诉老人微信步数可以提现</li>
+              <li>给盲人手枪说是吹风机</li>
+              <li>给盲人吃玻璃渣说是跳跳糖</li>
 
             <h3 className="text-xl font-semibold mb-3">兴趣爱好</h3>
             <ul className="list-disc list-inside mb-6 space-y-1">
-              <li>编程与技术研究</li>
-              <li>音乐欣赏与发现</li>
-              <li>电影和电视剧</li>
-              <li>阅读与写作</li>
-              <li>理财与投资</li>
+              <li>sing</li>
+              <li>jump</li>
+              <li>baskball</li>
+              <li></li>
+              <li></li>
             </ul>
 
             <h3 className="text-xl font-semibold mb-3">联系我</h3>

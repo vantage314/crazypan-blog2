@@ -27,7 +27,7 @@ export default function LikeButton({ initialLikes }: LikeButtonProps) {
       variant="ghost"
       size="sm"
       onClick={handleLike}
-      className="h-8 px-2 text-muted-foreground hover:text-red-500 transition-colors"
+      className="h-8 px-2 text-white/80 hover:text-red-500 transition-colors"
     >
       <Heart className={`h-4 w-4 mr-1 transition-all ${isLiked ? "fill-red-500 text-red-500 scale-110" : ""}`} />
       <span className="text-xs">{likes}</span>
