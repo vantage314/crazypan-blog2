@@ -1,4 +1,9 @@
 # 🚀 Crazypan Blog
+后续运营指令
+git add .
+git commit -m "刘子铭：更新博客内容和资源文件"
+git push origin main
+
 
 一个现代化的全栈博客系统，基于 Next.js 15 和 Express.js 构建，具备完整的文章管理、用户认证、评论系统等功能。
 

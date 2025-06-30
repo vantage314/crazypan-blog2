@@ -9,7 +9,7 @@ export default function AboutPage() {
       <div className="text-center mb-8">
         <div className="relative h-32 w-32 mx-auto mb-4 rounded-full overflow-hidden ring-2 ring-white/80">
           <Image
-            src="/me.png"
+            src="/yhw.png"
             alt="我的头像"
             fill
             sizes="128px"
@@ -23,7 +23,7 @@ export default function AboutPage() {
       <Card>
         <CardContent className="pt-6">
           <div className="prose prose-gray dark:prose-invert max-w-none">
-            <p className="text-lg leading-relaxed mb-6">你好！我是刘子铭 大家可以叫我PIG_Liu</p>
+            <p className="text-lg leading-relaxed mb-6">你好！我是杨瀚文 大家可以叫我PIG_YANG</p>
 
             
             {/* 工作描述省略 */}
