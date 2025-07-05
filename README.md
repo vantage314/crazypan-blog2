@@ -1,7 +1,7 @@
 # 🚀 Crazypan Blog
 后续运营指令
 git add .
-git commit -m "刘子铭：更新博客内容和资源文件"
+git commit -m "YHW"
 git push origin main
 
 
